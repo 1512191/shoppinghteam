@@ -35,8 +35,14 @@ class Search extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         let name = this.state.search;
-        let { history } = this.props;
-        history.push(`/Products/${name}`);
+        if(name.trim().length > 0)
+        {
+            let { history } = this.props;
+            history.push(`/Products/${name}`);
+        }else{
+            return;
+        }
+       
     }
     handleKeyUp = (e) => {
         e.preventDefault();

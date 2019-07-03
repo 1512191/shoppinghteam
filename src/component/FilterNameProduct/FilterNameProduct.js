@@ -107,6 +107,13 @@ class ProductFilter extends React.Component {
         data = this.props.products.data;
         let { display } = this.props;
         let loading='';
+        let notification = '';
+        if(data.length <= 0){
+            notification =<div>Không có sản phẩm cần tìm</div>
+        }
+        else{
+            notification=<div></div>
+        }
         if(this.props.products && this.props.products.loading === true){
             loading=<img  style={{position:'absolute',height:'120px', width:'120px', margin:'auto', left:'0px', right:'0px', bottom:'0px'}} src={load} alt='loading'/>
         }
@@ -143,6 +150,7 @@ class ProductFilter extends React.Component {
                                     </div>
                                 </div>
                             ))}
+                            {notification}
                         </div>
                     </div>
                 </div>

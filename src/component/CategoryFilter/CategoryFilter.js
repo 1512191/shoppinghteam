@@ -97,6 +97,12 @@ class CategoryFilter extends React.Component {
         if (this.props.products && this.props.products.loading === true) {
             loading = <img style={{ position: 'absolute', height: '120px', width: '120px', margin: 'auto', left: '0px', right: '0px', bottom: '0px' }} src={load} alt='loading' />
         }
+        if(data.length <= 0){
+            notification =<div>Không có sản phẩm cần tìm</div>
+        }
+        else{
+            notification=<div></div>
+        }
         return (
             <div className="agileinfo-ads-display col-lg-12">
                 <div className="wrapper">
@@ -129,6 +135,7 @@ class CategoryFilter extends React.Component {
                                     </div>
                                 </div>
                             ))}
+                            {notification}
                         </div>
                     </div>
                 </div>
