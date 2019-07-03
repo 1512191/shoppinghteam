@@ -46,10 +46,12 @@ class Search extends Component {
     }
     handleKeyUp = (e) => {
         e.preventDefault();
-        if (e.keyCode === 13) {
+        if (e.keyCode === 13 && this.state.search.trim()) {
             let name = this.state.search;
             let { history } = this.props;
             history.push(`/Products/${name}`);
+        }else{
+            return;
         }
     }
     setWrapperRef = (node) => {
