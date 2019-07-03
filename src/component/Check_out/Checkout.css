@@ -1,0 +1,33 @@
+.method_de input{
+    width: fit-content;
+    
+}
+.method_de{
+    color: #F45C5D;
+    font-weight: normal;
+    font-size: 16px;
+    font-weight: bolder;
+}
+.total >tr>td{
+    
+    color: red;
+    font-size: 16px;
+    border-right: 1px solid #ded2d2;
+    text-align: center;
+    padding: 12px 0;
+    letter-spacing: 1px;
+    font-weight: normal;
+    font-weight: bolder;
+}
+.disabledbutton {
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+button#check_out:hover{
+    background: #F45C5D;
+}
+.invert{
+    padding-bottom: 20px;
+    padding-top: 20px;
+}

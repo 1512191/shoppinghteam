@@ -1,0 +1,61 @@
+.row{
+    margin-bottom:10px;
+}
+.word{
+    font-weight: bold;
+    
+}
+.col-container {
+     /* Make the container element behave like a table */
+    width: 100%; /* Set full-width to expand the whole page */
+}
+
+.col {
+    display: table-cell; /* Make elements inside the container behave like table cells */
+}
+.madonhang{
+    color: #007bff;
+    
+}
+.fa-check-circle{
+    color: rgb(21, 87, 36);
+    
+}
+.status{
+    text-align: left
+}
+.billInfor{
+    color:#856404
+}
+.fa-spinner{
+    color:#9900FF
+}
+.fa-times-circle{
+    color:#721c24
+}
+.ads-grid {
+    font-size: 16px
+}
+.pagination{
+    text-align: center;
+    display: inline-block;
+}
+.cart-right{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+ "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+ sans-serif;
+}
+.col-sm-5{
+    border: 'none';
+    color:'black';
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+ "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+ sans-serif;
+}
+.Infor{
+    color:'black' !important;
+    margin-bottom: '10px' !important
+}
+p{
+    color:'black'
+}

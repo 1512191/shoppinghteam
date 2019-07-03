@@ -1,0 +1,24 @@
+input[type='radio'] {
+    height: 15px;
+    width: 15px;
+    vertical-align: middle;
+}
+input{
+    border-radius: 10px;
+}
+.form-control {
+    
+    font-family: 'Open Sans', sans-serif;
+   
+    /* border: #0879c9; */
+}
+.form-group span{
+    float:'left'
+}
+.form-group {
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+.alert{
+    font-size: 14px
+}
