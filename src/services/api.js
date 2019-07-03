@@ -1,6 +1,6 @@
 
 const axios = require('axios');
-const baseURL='https://hteamshoppingwebapi.azurewebsites.net';
+const baseURL='https://hteamshoppingwebapi.azurewebsites.net/api';
 
 
 
