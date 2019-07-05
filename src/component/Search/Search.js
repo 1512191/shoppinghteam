@@ -172,7 +172,7 @@ class Search extends Component {
                                             <form className=" last" onClick={(event) => this.onPreventDefault(event)}>
                                                 <div className="tooltiptext alert alert-info" style={{ visibility: this.props.toogleTootip === true ? 'visible' : 'hidden' }}>
 
-                                                    <span className="rounded-circle" style={{ borderRadius: "50%", backgroundColor: "#dff0d8", borderColor: '#d6e9c6', color: '#3c763d', marginRight: '15px' }}><i className="fa fa-check" aria-hidden="true"></i></span><strong style={{ paddingTop: '15px', marginTop: '15px', fontSize: '16px' }} className="alert-heading">Add Successfully!</strong>
+                                                    <span className="rounded-circle" style={{ borderRadius: "50%", backgroundColor: "#dff0d8", borderColor: '#d6e9c6', color: '#3c763d', marginRight: '15px' }}><i className="fa fa-check" aria-hidden="true"></i></span><strong style={{ paddingTop: '15px', marginTop: '15px', fontSize: '16px' }} className="alert-heading">Thêm thành công!</strong>
 
                                                 </div>
                                                 <input type="hidden" name="cmd" value="0" />

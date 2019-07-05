@@ -80,15 +80,15 @@ class BillDetail extends Component {
     let inFo = '';
     let toTal = '';
     let statusBill = '';
-    let buttonReorder = '';
-    if (this.state.statusReorder === true) {
-      alert('Đặt hàng không thành công')
-    }
-    if (bill && bill.Status && bill.Status === 'Failed') {
-      buttonReorder = <button className="submit check_out btn" onClick={() => this.reOrder(billID)}>Đặt lại</button>
-    } else {
-      buttonReorder = <div></div>
-    }
+   // let buttonReorder = '';
+    // if (this.state.statusReorder === true) {
+    //   alert('Đặt hàng không thành công')
+    // }
+    // if (bill && bill.Status && bill.Status === 'Failed') {
+    //   buttonReorder = <button className="submit check_out btn" onClick={() => this.reOrder(billID)}>Đặt lại</button>
+    // } else {
+    //   buttonReorder = <div></div>
+    // }
     if (bill) {
       statusBill = <div className={bill.Status === 'Failed' ? 'row alert alert-danger' : 'row'} style={{ background: bill.Status === 'Failed' ? '' : 'white', padding: '15px' }}>
         <div className="col-sm-6" style={{ textAlign: 'left' }}>
@@ -96,13 +96,13 @@ class BillDetail extends Component {
 
         </div>
         <div className="col-sm-6">
-          <div className="right-w3l" style={{ textAlign: "center", alignItems: "center" }}>
+          {/* <div className="right-w3l" style={{ textAlign: "center", alignItems: "center" }}>
 
             {
               buttonReorder
             }
 
-          </div>
+          </div> */}
         </div>
       </div>
     } else {

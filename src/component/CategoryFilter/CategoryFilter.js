@@ -98,7 +98,7 @@ class CategoryFilter extends React.Component {
             loading = <img style={{ position: 'absolute', height: '120px', width: '120px', margin: 'auto', left: '0px', right: '0px', bottom: '0px' }} src={load} alt='loading' />
         }
         let notification='';
-        if(data.length <= 0){
+        if(data.length <= 0 && this.props.products.loading === false){
             notification =<div>Không có sản phẩm cần tìm</div>
         }
         else{

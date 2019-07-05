@@ -108,7 +108,7 @@ class ProductFilter extends React.Component {
         let { display } = this.props;
         let loading='';
         let notification = '';
-        if(data.length <= 0){
+        if(data.length <= 0 && this.props.products.loading === false){
             notification =<div>Không có sản phẩm cần tìm</div>
         }
         else{
