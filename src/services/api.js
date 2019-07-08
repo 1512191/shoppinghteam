@@ -20,4 +20,5 @@ export const changePassword = (account, token)=>axios.put(`${baseURL}/changepass
 export const getBillDetail = (id, token)=>axios.get(`${baseURL}/Bill/${id}`,{headers:{'Content-Type': 'application/json','Authorization':'Bearer ' + token}});
 export const getExpectedDate = (date, type)=>axios.get(`${baseURL}/expectedReceivedAt?createdAt=${date}&deliveryType=${type}`)
 export const reorderBill = (billID, token)=>axios.get(`${baseURL}/reorderbill?billID=${billID}`, {headers:{'Content-Type': 'application/json','Authorization':'Bearer ' + token}})
-
+export const getCustomer = (token)=>axios.get(`${baseURL}/customer`,{headers:{'Content-Type': 'application/json','Authorization':'Bearer ' + token}})
+export const editInfor = (token, infor)=>axios.put(`${baseURL}/customer`,infor, {headers:{'Content-Type': 'application/json','Authorization':'Bearer ' + token}})

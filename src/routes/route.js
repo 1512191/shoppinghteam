@@ -12,6 +12,7 @@ import NotFound from '../pages/Notfound';
 import BillInfor from '../pages/ListBills';
 import FilterNameProduct from '../pages/FilterNameProduct';
 import OrderDetail from '../pages/OrderDetail';
+import Profile from '../pages/Profile';
 class RouterURL extends Component {
     render() {
         return (
@@ -31,6 +32,7 @@ class RouterURL extends Component {
                 <Route path='/ListOrder' render={(props, match) => <BillInfor  {...props} match={match}/>}/>
                 <Route exact path="/Products/:name" render={(props, match) => (<FilterNameProduct {...props} match={match}></FilterNameProduct>)}></Route>
                 <Route path='/OrderDetail/:id' render={(props, match) => <OrderDetail  {...props} match={match}/>}/>
+                <Route path='/Profile' render={(props, match) => <Profile  {...props} match={match}/>}/>
                 <Route path='' component={NotFound} />
             </Switch>
         

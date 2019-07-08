@@ -99,7 +99,7 @@ class CategoryFilter extends React.Component {
         }
         let notification='';
         if(data.length <= 0 && this.props.products.loading === false){
-            notification =<div>Không có sản phẩm cần tìm</div>
+            notification =<div style={{textAlign:'center', textTransform:'uppercase'}}>Không có sản phẩm cần tìm</div>
         }
         else{
             notification=<div></div>

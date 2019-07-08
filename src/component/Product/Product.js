@@ -98,7 +98,7 @@ class Product extends React.Component {
         data = this.props.products.data;
         let { display } = this.props;
         let loading = '';
-        let notification = data.length === 0 ?<div className="row" style={{textAlign:'center', textTransform:'uppercase'}}>Không có sản phẩm</div>:<div></div>
+        let notification = data.length === 0 && this.props.products.loading === false ?<div className="row" style={{textAlign:'center', textTransform:'uppercase'}}>Không có sản phẩm</div>:<div></div>
         if (this.props.products && this.props.products.loading === true) {
             loading = <img style={{ position: 'absolute', height: '120px', width: '120px', margin: 'auto', left: '0px', right: '0px', bottom: '0px' }} src={load} alt='loading' />
         }

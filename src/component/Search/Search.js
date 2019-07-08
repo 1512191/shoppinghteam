@@ -150,7 +150,7 @@ class Search extends Component {
                             <div className="col-md-3 logo_agile">
                                 <h1 className="text-center">
                                     <NavLink to="/" className="font-weight-bold font-italic">
-                                        <img src="../images/logo2.png" alt=" " className="img-fluid" />Electro Store
+                                        <img src="../images/logo2.png" alt=" " className="img-fluid" />HTEAM
 						</NavLink>
                                 </h1>
                             </div>

@@ -15,31 +15,31 @@ import productFilterByNameReducer from './productFilterByName';
 import tootipReducer from './toogleTooltip';
 import changePassReducer from './changePass';
 import billDetailReducer from './billDetail';
-
-
+import customerReducer from './customerInfor';
+import updateReducer from './updateInfor';
 
 
 const appReducer = combineReducers({
-   modalReducer : modalReducer,
-   productsReducer:productsReducer,
-   cartReducer:cartReducer,
-   productReducer:productReducer,
-   checkoutReducer:checkoutReducer,
-   categoryReducer:categoryReducer,
-   categoryFilter:categoryFilterReducer,
-   authReducer:authReducer,
-   registerReducer:registerReducer,
-   methodReducer:methodReducer,
-   addressReducer:addressReducer,
-   billReducer:billReducer,
-   productByNameReducer:productFilterByNameReducer,
-   tooltipReducer:tootipReducer,
-   changePassReducer:changePassReducer,
-   billDetailReducer:billDetailReducer,
-  
-   
+    modalReducer: modalReducer,
+    productsReducer: productsReducer,
+    cartReducer: cartReducer,
+    productReducer: productReducer,
+    checkoutReducer: checkoutReducer,
+    categoryReducer: categoryReducer,
+    categoryFilter: categoryFilterReducer,
+    authReducer: authReducer,
+    registerReducer: registerReducer,
+    methodReducer: methodReducer,
+    addressReducer: addressReducer,
+    billReducer: billReducer,
+    productByNameReducer: productFilterByNameReducer,
+    tooltipReducer: tootipReducer,
+    changePassReducer: changePassReducer,
+    billDetailReducer: billDetailReducer,
+    customerReducer: customerReducer,
+    updateReducer:updateReducer
 
-   
+
 
 })
 export default appReducer;
