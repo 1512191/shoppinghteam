@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 import './Checkout.css';
 import util from '../../Util';
 import { connect } from 'react-redux';
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Table } from 'react-bootstrap';
 
 
 class Check_out extends Component {
     constructor(props) {
         super(props);
-
+        this.state = {
+            errorMessage: ''
+        }
     }
     onPreventDefault = (e) => {
         e.preventDefault();
@@ -83,7 +85,7 @@ class Check_out extends Component {
     }
     onLogin = () => {
         let user = localStorage.getItem('user');
-        let countCart = util.countQuantity(JSON.parse(localStorage.getItem('cart')))
+        let countCart = localStorage.getItem('cart') ? util.countQuantity(JSON.parse(localStorage.getItem('cart'))) : 0;
         let { history } = this.props;
         if (countCart > 0) {
             if (!user) {
@@ -94,6 +96,9 @@ class Check_out extends Component {
                 history.push('/Address');
             }
         } else {
+            this.setState({
+                errorMessage: 'Giỏ hàng chưa có sản phẩm!'
+            })
             return;
         }
 
@@ -102,6 +107,10 @@ class Check_out extends Component {
         let products = this.props.cart;
         let countCart = this.props.cart ? util.countQuantity(this.props.cart) : 0;
         let alert = this.props.message ? <div className={this.props.message.className}>{this.props.message.message}</div> : <div style={{ display: 'none' }}></div>
+        let alertWarning = <div></div>
+        if (this.state.errorMessage) {
+            alertWarning = <div className="alert alert-danger" style={{textTransform: 'uppercase', fontFamily: '"Times New Roman", Times, serif',fontSize: '20px'}}>{this.state.errorMessage}</div>
+        }
         let rowItem = products.length > 0 ? products.map((item, i) => {
             return (
                 <tr key={i} className="rem1" >
@@ -137,11 +146,11 @@ class Check_out extends Component {
         return (
             <div className="privacy py-sm-5 py-4" style={{ background: 'rgb(238, 232, 205)' }}>
                 <div className="container py-xl-4 py-lg-2">
-
+                {alertWarning}
                     <h3 className="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
                         <span style={{ textTransform: 'uppercase', fontFamily: '"Times New Roman", Times, serif' }}>Giỏ hàng</span>
                     </h3>
-
+                   
                     <div className="checkout-right">
 
                         <Table responsive="sm" style={{ fontSize: '16px', backgroundColor: "#607d8b", color: 'white' }} >

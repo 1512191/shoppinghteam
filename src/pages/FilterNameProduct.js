@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Banner from '../component/Banner/Banner';
+// import Banner from '../component/Banner/Banner';
 import Header from '../component/Header/Hearder';
 import Search from '../component/Search/Search';
 import Category from '../component/Category/Category';
@@ -27,11 +27,16 @@ export default class Home extends Component {
                 <Category></Category>
                 <div className="ads-grid py-sm-5 py-4">
                     <div className="container-fluid py-xl-4 py-lg-2">
-                        <Banner />
-                        <br />
-                        <br />
-                        <h3 className="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
-                        DANH SÁCH SẢN PHẨM</h3>
+                        {/* <Banner /> */}
+                        <div className="row">
+
+                            <div className="col-sm-6" >                        <img style={{ objectFit: 'cover', height: '100px', width: '100%' }}className="banner" src="https://api.dienthoaigiakho.vn/photos/1561372126512-BANNER-.png" alt="banner" />
+                            </div>
+                            <div className="col-sm-6" >                        <img style={{ objectFit: 'cover', height: '100px', width: '100%' }}className="banner" src="https://api.dienthoaigiakho.vn/photos/1561371958453-BANNER.png" alt="banner" />
+                            </div>
+                        </div>
+                        <h3 className="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3" style={{marginTop:'20px'}}>
+                            DANH SÁCH SẢN PHẨM</h3>
 
                         <div className="row" id="search">
                             <FilterNameProduct></FilterNameProduct>

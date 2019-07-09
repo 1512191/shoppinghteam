@@ -28,7 +28,7 @@ class RouterURL extends Component {
                 <Route path='/SignIn' render={(props, match) => <SignIn  {...props} match={match}/>   }/>
                 {/* login khi chưa mua hàng */}
                 <Route path='/Register' render={(props, match) => <Register  {...props} match={match}/>   }/>
-                <Route path='/BillInfor' render={(props, match) => <BillInfor  {...props} match={match}/>}/>
+                {/* <Route path='/BillInfor' render={(props, match) => <BillInfor  {...props} match={match}/>}/> */}
                 <Route path='/ListOrder' render={(props, match) => <BillInfor  {...props} match={match}/>}/>
                 <Route exact path="/Products/:name" render={(props, match) => (<FilterNameProduct {...props} match={match}></FilterNameProduct>)}></Route>
                 <Route path='/OrderDetail/:id' render={(props, match) => <OrderDetail  {...props} match={match}/>}/>

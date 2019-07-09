@@ -10,7 +10,7 @@ class OrderDetail extends Component {
   componentDidMount() {
 
     if (!localStorage.getItem("user")) {
-      this.props.history.push("/Login");
+      this.props.history.push("/SignIn");
       return;
     }
 

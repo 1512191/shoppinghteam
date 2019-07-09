@@ -43,15 +43,20 @@ class ListBills extends Component {
   componentDidMount() {
 
     let infoLogin = localStorage.getItem('user')
-    infoLogin = JSON.parse(infoLogin);
-    let token = infoLogin.access_token
-    infoLogin = JSON.parse(infoLogin.Customer)
-    if (infoLogin) {
-      this.props.getBills(infoLogin.ID, token);
-
-    } else {
-      console.log('haha')
+    if(infoLogin){
+      infoLogin = JSON.parse(infoLogin);
+      let token = infoLogin.access_token
+      infoLogin = JSON.parse(infoLogin.Customer)
+      if (infoLogin) {
+        this.props.getBills(infoLogin.ID, token);
+  
+      } else {
+        console.log('haha')
+      }
+    }else{
+      this.props.history.push('/SignIn');
     }
+   
 
 
   }

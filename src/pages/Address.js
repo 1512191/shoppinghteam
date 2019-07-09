@@ -21,11 +21,11 @@ class Address extends Component {
   constructor(props) {
     super(props);
     let infoLogin = JSON.parse(localStorage.getItem('user'));
-    let Customer = JSON.parse(infoLogin.Customer)
-    let address = Customer.Address;
+    let Customer = infoLogin?JSON.parse(infoLogin.Customer):{};
+    let address = Customer && Customer.Address?Customer.Address:{};
     this.state = {
       toggle: false,
-      infoLogin: Customer,
+      infoLogin: infoLogin && JSON.parse(infoLogin.Customer)?Customer:{},
       address: address ? address : {
         CustomAddress: '',
         Town: '',
@@ -436,7 +436,7 @@ onChangeNote = (event)=>{
           <div>Tổng cộng</div>
         </td>
         <td colSpan={1} style={{ textAlign: 'right', paddingRight: '10px' }}>
-          <div>{util.showVNDCurrency(this.toTalPrice(products))}</div>
+          <div>{util.showVNDCurrency(this.toTalPrice(products) - this.state.deliveryMethod.Price) }</div>
           <div>  {this.state.deliveryMethod
             ? util.showVNDCurrency(
               this.state.deliveryMethod.Price

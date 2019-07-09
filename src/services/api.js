@@ -2,7 +2,7 @@
 const axios = require('axios');
 const baseURL='https://hteamshoppingwebapi.azurewebsites.net/api';
 
-
+// const baseURL='http://localhost:64929/api/';
 
 export const getProducts = (page, limit)=>axios.get(`${baseURL}/Product?page=${page}&perPage=${limit}&filter=1&condition=`) ;
 export const getDetail = (id)=>axios.get(`${baseURL}/Product/${id}`);

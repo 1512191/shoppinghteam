@@ -25,15 +25,19 @@ class BillDetail extends Component {
   }
   componentDidMount() {
 
-    this.props.clearModal()
+    this.props.clearModal();
+    let infoLogin = localStorage.getItem('user');
     const { match } = this.props;
+    if(infoLogin){
     let token = (JSON.parse(localStorage.getItem('user'))).access_token;
     if (match) {
       const { id } = match.params;
 
       this.props.getBillDetail(id, token);
     }
-
+  }else{
+    this.props.history.push('/SignIn');
+  }
 
   }
   componentWillReceiveProps(nextProps) {
