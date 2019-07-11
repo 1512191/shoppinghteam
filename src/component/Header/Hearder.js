@@ -8,6 +8,8 @@ import { changePass, clearAll } from '../../actions/change-pass';
 import load from '../../images/Double Ring-2.2s-100px.gif';
 import { getCustomer, actionClear,updateInfor, actionClearAll } from '../../actions/customer-infor';
 import { getAddress } from '../../actions/address';
+import { async } from 'q';
+import {removeCart} from '../../actions/cart';
 class Hearder extends Component {
 	constructor(props) {
 		super(props);
@@ -604,10 +606,11 @@ class Hearder extends Component {
 			history.push('/SignIn');
 		} else return;
 	}
-	onLogout = () => {
+	onLogout = async () => {
 		const { history } = this.props;
 		if (localStorage.getItem('user')) {
-			this.props.logOut();
+			await this.props.logOut();
+			await this.props.removeCart()
 			history.push('/');
 		} else return;
 	}
@@ -1091,7 +1094,8 @@ const mapDispatchToProps = (dispatch) => {
 		getCustomer: (token) => dispatch(getCustomer(token)),
 		actionClear: () => dispatch(actionClear()),
 		updateInfor:(token, infor)=>dispatch(updateInfor(token, infor)),
-		actionClearAll:()=>dispatch(actionClearAll())
+		actionClearAll:()=>dispatch(actionClearAll()),
+		removeCart:()=>dispatch(removeCart())
 	}
 }
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Hearder));

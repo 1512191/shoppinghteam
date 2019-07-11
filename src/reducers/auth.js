@@ -45,6 +45,9 @@ export default (state = user, action) => {
         case types.LOG_OUT: {
             if (localStorage.getItem('user')) {
                 localStorage.removeItem('user');
+                // if(localStorage.getItem('cart')){
+                //     localStorage.removeItem('cart')
+                // }
                 //localStorage.removeItem('login');
             }
             return {

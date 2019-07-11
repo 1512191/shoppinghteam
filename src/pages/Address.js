@@ -21,8 +21,8 @@ class Address extends Component {
   constructor(props) {
     super(props);
     let infoLogin = JSON.parse(localStorage.getItem('user'));
-    let Customer = infoLogin?JSON.parse(infoLogin.Customer):{};
-    let address = Customer && Customer.Address?Customer.Address:{};
+    let Customer = infoLogin?JSON.parse(infoLogin.Customer):null;
+    let address = Customer && Customer.Address?Customer.Address:null;
     this.state = {
       toggle: false,
       infoLogin: infoLogin && JSON.parse(infoLogin.Customer)?Customer:{},
@@ -201,8 +201,10 @@ class Address extends Component {
   }
 
   componentWillReceiveProps(nextProps, prevState) {
+    //console.log(nextProps.address)
     if (!this.state.isGottenDistricts && nextProps.address && nextProps.address.districts.length > 0) {
-      if (this.state.district) {
+      if (this.state.district && this.state.district.ID) {
+        //console.log(this.state.district && this.state.district.ID)
         let district = nextProps.address.districts.filter(item => {
           return item.ID === this.state.district.ID;
         });

@@ -42,12 +42,15 @@ class BillDetail extends Component {
   }
   componentWillReceiveProps(nextProps) {
     let id = nextProps.match.params.id;
-    let token = (JSON.parse(localStorage.getItem('user'))).access_token;
-    if (id !== this.props.match.params.id) {
-
-      this.props.clear();
-      this.props.getBillDetail(id, token);
+    if(localStorage.getItem('user')){
+      let token = (JSON.parse(localStorage.getItem('user'))).access_token;
+      if (id !== this.props.match.params.id) {
+  
+        this.props.clear();
+        this.props.getBillDetail(id, token);
+      }
     }
+   
 
   }
   toTalPrice = (item) => {
