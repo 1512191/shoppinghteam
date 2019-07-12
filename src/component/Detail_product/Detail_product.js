@@ -114,7 +114,7 @@ class Detail_product extends Component {
                             <div className="col-lg-7 single-right-left simpleCart_shelfItem">
                                 <h3 className="mb-3">{product.Name}</h3>
                                 <p className="mb-3">
-                                    <span className="item_price">{util.showVNDCurrency(product.Price)}</span>
+                                    <span className="item_price">{product.Price?util.showVNDCurrency(product.Price):'0 đ'}</span>
                                 </p>
                                 <div className="single-infoagile">
                                     <ul>
@@ -123,31 +123,7 @@ class Detail_product extends Component {
                                         </li>
                                     </ul>
                                 </div>
-                                <div className="product-single-w3l">
-                                    <p className="my-3">
-                                        <i className="far fa-hand-point-right mr-2"></i>
-                                        <label>1 Year</label>Manufacturer Warranty</p>
-                                    <ul>
-                                        <li className="mb-1">
-                                            3 GB RAM | 16 GB ROM | Expandable Upto 256 GB
-                                </li>
-                                        <li className="mb-1">
-                                            5.5 inch Full HD Display
-                                </li>
-                                        <li className="mb-1">
-                                            13MP Rear Camera | 8MP Front Camera
-                                </li>
-                                        <li className="mb-1">
-                                            3300 mAh Battery
-                                </li>
-                                        <li className="mb-1">
-                                            Exynos 7870 Octa Core 1.6GHz Processor
-                                </li>
-                                    </ul>
-                                    <p className="my-sm-4 my-3">
-                                        <i className="fas fa-retweet mr-3"></i>Net banking & Credit/ Debit/ ATM card
-                            </p>
-                                </div>
+                               
                                 <button className='btn btn-danger addCart' onClick={() => this.onClick(product, 1)}>Thêm vào giỏ</button>
                             </div>
                         </div>

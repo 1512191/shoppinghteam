@@ -16,8 +16,8 @@ class Footer extends Component {
                                         <i className="fas fa-dolly"></i>
                                     </div>
                                     <div className="col-8 text-form-footer">
-                                        <h3>Good price </h3>
-                                        <p>of Products</p>
+                                        <h3>Giá phù hợp</h3>
+                                        <p>cho mọi sản phẩm</p>
                                     </div>
                                 </div>
                             </div>
@@ -27,8 +27,8 @@ class Footer extends Component {
                                         <i className="fas fa-shipping-fast"></i>
                                     </div>
                                     <div className="col-8 text-form-footer">
-                                        <h3>Fast Delivery</h3>
-                                        <p>World Wide</p>
+                                        <h3>Giao hàng nhanh</h3>
+                                        <p>khu vực Hồ Chí Minh</p>
                                     </div>
                                 </div>
                             </div>
@@ -38,8 +38,8 @@ class Footer extends Component {
                                         <i className="far fa-thumbs-up"></i>
                                     </div>
                                     <div className="col-8 text-form-footer">
-                                        <h3>Big Choice</h3>
-                                        <p>of Products</p>
+                                        <h3>Nhiều lựa chọn</h3>
+                                        <p>nhiều sản phẩm</p>
                                     </div>
                                 </div>
                             </div>
@@ -57,7 +57,7 @@ class Footer extends Component {
                            
                             <div style={{textAlign:'center'}}className="col-md-6 col-sm-12 footer-grids w3l-agileits mt-md-0 mt-4">
                             <div className="footer-grids  w3l-socialmk mt-3">
-                                <h3 className="text-white font-weight-bold mb-3">Get in Touch</h3>
+                                <h3 className="text-white font-weight-bold mb-3">Contact</h3>
                                 <ul>
                                    
                                     

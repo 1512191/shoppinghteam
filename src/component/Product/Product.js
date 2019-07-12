@@ -119,7 +119,7 @@ class Product extends React.Component {
                                                 <img src={item.Image} with="200" height="200" alt={item.Name} />
                                                 <NavItem className="men-cart-pro">
                                                     <NavItem className="inner-men-cart-pro">
-                                                        <div onClick={() => this.props.history.push(`/Detail/${item.ID}`)} className="link-product-add-cart">Quick View</div>
+                                                        <div onClick={() => this.props.history.push(`/Detail/${item.ID}`)} className="link-product-add-cart">Xem nhanh</div>
                                                     </NavItem >
                                                 </NavItem >
                                             </NavItem>

@@ -797,7 +797,7 @@ class Hearder extends Component {
 		return (
 			<div style={{ marginBottom: '0px', background: 'rgb(4, 53, 76)' }} className="row main-top-w3l py-2">
 				<div className="col-lg-4 header-most-top">
-					<p className="text-white text-lg-left text-center">Offer Zone Top Deals & Discounts
+					<p className="text-white text-lg-left text-center">Trải nghiệm những sản phẩm mới nhất
 						<i className="fas fa-shopping-cart ml-1"></i>
 					</p>
 				</div>
@@ -806,11 +806,11 @@ class Hearder extends Component {
 					<ul>
 						<li className="text-center border-right text-white">
 							<a className="play-icon popup-with-zoom-anim text-white" href="#small-dialog1">
-								<i className="fas fa-map-marker mr-2"></i>Select Location</a>
+								<i className="fas fa-map-marker mr-2"></i>Hồ Chí Minh</a>
 						</li>
 						<li className="text-center border-right text-white">
 							<a href="#" data-toggle="modal" data-target="#exampleModal" className="text-white">
-								<i className="fas fa-truck mr-2"></i>Track Order</a>
+								<i className="fas fa-truck mr-2"></i>Giao hàng nhanh</a>
 						</li>
 						<li className="text-center border-right text-white">
 							<i className="fas fa-phone mr-2"></i> 001 234 5678
