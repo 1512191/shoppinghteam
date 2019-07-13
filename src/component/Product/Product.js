@@ -27,7 +27,7 @@ class Product extends React.Component {
         const lastDivOffset = lastTag ? lastTag.offsetTop + lastTag.clientHeight : (document.documentElement && document.documentElement.scrollHeight) || document.body.scrollHeight;
 
         const pageOffset = window.pageYOffset + window.innerHeight;
-        const bottomOffset = 20;
+        const bottomOffset = 10;
         if (pageOffset > lastDivOffset - bottomOffset) {
             this.loadMore();
         }

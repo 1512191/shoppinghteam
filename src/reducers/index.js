@@ -17,7 +17,7 @@ import changePassReducer from './changePass';
 import billDetailReducer from './billDetail';
 import customerReducer from './customerInfor';
 import updateReducer from './updateInfor';
-
+import detailCatReducer from './detailCat';
 
 const appReducer = combineReducers({
     modalReducer: modalReducer,
@@ -37,7 +37,8 @@ const appReducer = combineReducers({
     changePassReducer: changePassReducer,
     billDetailReducer: billDetailReducer,
     customerReducer: customerReducer,
-    updateReducer:updateReducer
+    updateReducer:updateReducer,
+    detailCatReducer:detailCatReducer
 
 
 

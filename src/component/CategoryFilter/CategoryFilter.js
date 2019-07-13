@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{ createRef } from 'react';
 import '../Product/Product.css';
 import { NavLink } from 'react-router-dom';
 import load from '../../images/Double Ring-2.2s-100px.gif';
@@ -22,7 +22,7 @@ class CategoryFilter extends React.Component {
         const lastTag = document.querySelector('.product-sec1 .row:last-child');
         const lastDivOffset = lastTag ? lastTag.offsetTop + lastTag.clientHeight : (document.documentElement && document.documentElement.scrollHeight) || document.body.scrollHeight;
         const pageOffset = window.pageYOffset + window.innerHeight;
-        const bottomOffset = 20;
+        const bottomOffset = 10;
         if (pageOffset > lastDivOffset - bottomOffset) {
             this.loadMore(id);
         }
@@ -45,6 +45,7 @@ class CategoryFilter extends React.Component {
 
     }
     componentDidMount() {
+        
         this.scrollListener = window.addEventListener('scroll', (e) => {
             this.handleScroll(e)
         })
@@ -118,7 +119,7 @@ class CategoryFilter extends React.Component {
                                             <img src={item.Image} with="200" height="200" alt={item.Name} />
                                             <div className="men-cart-pro">
                                                 <div className="inner-men-cart-pro">
-                                                    <div onClick={() => this.props.history.push(`/Detail/${item.ID}`)} className="link-product-add-cart">Quick View</div>
+                                                    <div onClick={() => this.props.history.push(`/Detail/${item.ID}`)} className="link-product-add-cart">Xem nhanh</div>
                                                 </div>
                                             </div>
                                         </div>

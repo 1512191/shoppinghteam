@@ -22,3 +22,4 @@ export const getExpectedDate = (date, type)=>axios.get(`${baseURL}/expectedRecei
 export const reorderBill = (billID, token)=>axios.get(`${baseURL}/reorderbill?billID=${billID}`, {headers:{'Content-Type': 'application/json','Authorization':'Bearer ' + token}})
 export const getCustomer = (token)=>axios.get(`${baseURL}/customer`,{headers:{'Content-Type': 'application/json','Authorization':'Bearer ' + token}})
 export const editInfor = (token, infor)=>axios.put(`${baseURL}/customer`,infor, {headers:{'Content-Type': 'application/json','Authorization':'Bearer ' + token}})
+export const getDetailCat = (id)=>axios.get(`${baseURL}/detailcategory?id=${id}`);

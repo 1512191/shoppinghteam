@@ -75,3 +75,25 @@ export const loadingProduct = () => {
         type: constant.LOADING
     }
 }
+export const getDetailCat=(id)=>{
+    return (dispath)=>{
+       
+        service.getDetailCat(id).then(res=>{
+       
+        if(res.status == 200 && res.data){
+            dispath(getDetailCatData(res.data));
+        }
+    }).catch(err =>console.log(err))
+}
+}
+export const getDetailCatData=(data)=>{
+    return {
+        type: constant.DETAIL_CATEGORY,
+        data:data
+    }
+}
+export const clearDetail= () => {
+    return {
+        type: constant.CLEAR
+    }
+}

@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Button, Carousel } from 'react-bootstrap';
+import banner1 from '../../images/1.png';
+import banner2 from '../../images/2.png';
+import banner3 from '../../images/3.png';
 class Banner extends Component {
     render() {
         return (
@@ -7,7 +10,7 @@ class Banner extends Component {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://resources.dienthoaigiakho.vn/x500,q90,r/https://api.dienthoaigiakho.vn/photos/1559274257080-Untitled-2.gif"
+                        src={banner1}
                         alt="First slide"
                     />
 
@@ -15,7 +18,7 @@ class Banner extends Component {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://resources.dienthoaigiakho.vn/x500,q90,r/https://api.dienthoaigiakho.vn/photos/1559273828810-Untitled-4.gif"
+                        src={banner2}
                         alt="Third slide"
                     />
 
@@ -24,7 +27,7 @@ class Banner extends Component {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://resources.dienthoaigiakho.vn/x500,q90,r/https://api.dienthoaigiakho.vn/photos/1559281190921-iphone-XS-max-banner.gif"
+                        src={banner3}
                         alt="Third slide"
                     />
 
