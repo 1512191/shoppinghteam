@@ -112,11 +112,11 @@ class Product extends React.Component {
                         {notification}
                         <div className="row" style={{ opacity: this.props.products && this.props.products.loading ? 0.5 : 1, position: 'relative' }}>
                             {data && data.map((item, i) => (
-                                <div key={i} className="col-md-3 product-men mt-5">
+                                <div key={i} className="col-md-3 col-xs-3 col-md-3 product-men mt-5">
                                     <NavItem className="men-pro-item simpleCart_shelfItem">
                                         <NavLink to={`/Detail/${item.ID}`} >
                                             <NavItem className="men-thumb-item text-center">
-                                                <img src={item.Image} with="200" height="200" alt={item.Name} />
+                                                <img src={item.Image} width="200px" height="200px" alt={item.Name} />
                                                 <NavItem className="men-cart-pro">
                                                     <NavItem className="inner-men-cart-pro">
                                                         <div onClick={() => this.props.history.push(`/Detail/${item.ID}`)} className="link-product-add-cart">Xem nhanh</div>

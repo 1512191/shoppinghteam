@@ -20,3 +20,9 @@
 a{
     color:white;
 }
+@media only screen and (max-width: 600px) {
+    /* For desktop: */
+  
+    .col-md-4 {width: 50%;}
+    
+  }
