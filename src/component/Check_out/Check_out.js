@@ -113,14 +113,15 @@ class Check_out extends Component {
         }
         let rowItem = products.length > 0 ? products.map((item, i) => {
             return (
-                <tr key={i} className="rem1" >
+                <tr key={i}  >
                     <td className="invert" style={{ paddingBottom: '20px', paddingTop: '20px' }}>{i + 1}</td>
                     <td className="invert-image">
                         <Link to={`/Detail/${item.product.ID}`}>
                             <img src={item.product.Image} alt={item.product.Name} className="img-responsive" />
                         </Link>
                     </td>
-                    <td className="invert" style={{ paddingBottom: '20px', paddingTop: '20px' }}>
+                    <td  className="invert" style={{ paddingBottom: '20px', paddingTop: '20px', width:'150px' }}>
+                  
                         <div className="quantity">
                             <div className="quantity-select">
                                 <div className='entry value-minus disabled' isactive="false" onClick={() => this.onClickAdd(item, -1)}>&nbsp;</div>

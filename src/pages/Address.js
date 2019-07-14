@@ -465,9 +465,9 @@ onChangeNote = (event)=>{
             backgroundSize: "100% 100%"
           }}
         >
-          <div className="container py-xl-4 py-lg-2">
+          <div className="container py-xl-4 py-lg-2" style={{ opacity: this.props.checkPost && this.props.checkPost.loading ? 0.5 : 1, position: 'relative' }}>
             {tagError}
-            <div className="row" style={{ opacity: this.props.checkPost && this.props.checkPost.loading ? 0.5 : 1, position: 'relative' }}>
+            <div className="row" >
               {loading}
               <div className="col-sm-5" style={{backgroundColor:'white'}}>
 
@@ -508,10 +508,8 @@ onChangeNote = (event)=>{
                   })}
               
               </div>
-
-
-            </div>
-            <br />
+</div>
+ <br />
             <div className="row">
               <Table id="mytable" responsive style={{ backgroundColor: "#04354C" }}>
               <tbody>
@@ -576,10 +574,12 @@ onChangeNote = (event)=>{
                 </tbody>
               </Table>
             </div>
+            </div>
+           
 
 
 
-          </div>
+        
         </div>
 
         <Footer />
